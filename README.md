@@ -10,21 +10,12 @@ A responsive HTML-based survey form to gather feedback after an interview about 
 - 📅 Date picker with calendar icon
 - 📊 Multiple input types: text, email, select, radio, checkbox, textarea
 
-## 📷 Preview
-
-![Template Preview.png](https://github.com/N-Burman/survey-form/commit/136b086f1cf8218162c0c9e184076ccf15bb1805)  
 
 ## 🚀 Live Demo
 
 > You can view the live form here:  
 [🔗 GitHub Pages Link](https://n-burman.github.io/survey-form/)  
 
-## 📁 Project Structure
-
-survey-form/
-├── index.html
-├── preview.png
-└── README.md
 
 ## 🧠 How It Works
 

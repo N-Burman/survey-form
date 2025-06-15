@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Interview Survey Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="A survey form to assess the performance of a candidate">
+  <meta name="author" content="Nishith Burman 2025">
+
+  <!-- Bootstrap & FontAwesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  
+  <style>
+    .container {
+      margin-bottom: 5%;
+    }
+
+    #form-header {
+      margin-top: 5%;
+      text-align: center;
+    }
+
+    #form-tagline {
+      background: #ff6d00;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      color: #ffffff;
+      margin-top: 5%;
+      padding: 4%;
+      text-align: left;
+    }
+
+    #form-tagline .fa {
+      margin-bottom: 15%;
+    }
+
+    #form-tagline h2 {
+      margin-bottom: 15%;
+    }
+
+    #form-content {
+      background: #f4f4f4;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      margin-top: 5%;
+      padding: 3%;
+    }
+
+    .form-group {
+      margin-top: 5%;
+    }
+
+    .control-label {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .submit-button {
+      margin-top: 3%;
+      text-align: right;
+    }
+
+    button#submit {
+      background: #ff6d00;
+      color: #ffffff;
+      font-weight: 600;
+      width: 25%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div id="form-tagline" class="col-md-4">
+        <div class="form-tagline">
+          <i class="fa fa-envelope fa-5x"></i>
+          <h2>How Did I Do In Interview?</h2>
+          <p id="description" class="lead">I really value your opinion</p>
+        </div>
+      </div>
+
+      <div id="form-content" class="col-md-8">
+        <form id="survey-form">
+          <!-- Name -->
+          <div class="row form-group">
+            <div class="col-sm-3">
+              <label for="name" class="control-label">*Name:</label>
+            </div>
+            <div class="input-group col-sm-9">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+              </div>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name" required>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="row form-group">
+            <div class="col-sm-3">
+              <label for="email" class="control-label">*Email:</label>
+            </div>
+            <div class="input-group col-sm-9">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+              </div>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Enter Your Email" required>
+            </div>
+          </div>
+
+          <!-- Interview Date -->
+          <div class="row form-group">
+            <div class="col-sm-3">
+              <label for="interview-date" class="control-label">Interview Date:</label>
+            </div>
+            <div class="input-group col-sm-9">
+              <div class="input-group-prepend">
+                <span class="input-group-text" onclick="document.getElementById('interview-date').focus();">
+                  <i class="fa fa-calendar"></i>
+                </span>
+              </div>
+              <input type="date" id="interview-date" name="interview-date" class="form-control">
+            </div>
+          </div>
+
+          <!-- Interview Type -->
+          <div class="row form-group">
+            <div class="col-sm-3">
+              <label for="dropdown" class="control-label">Interview Type:</label>
+            </div>
+            <div class="input-group col-sm-9">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-briefcase"></i></span>
+              </div>
+              <select id="dropdown" class="form-control">
+                <option value="" disabled selected>Select Interview Type</option>
+                <option>Initial Screening</option>
+                <option>HTML/ CSS/ JavaScript (Conceptual)</option>
+                <option>Coding - Scenario Based</option>
+                <option>Client Round</option>
+                <option>HR Round</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Overall Rating -->
+          <div class="row form-group">
+            <div class="col-sm-3">
+              <label class="control-label">Overall Rating:</label>
+            </div>
+            <div class="col-sm-9">
+              <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="rating" value="5"> Excellent</div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="rating" value="4"> Very Good</div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="rating" value="3"> Average</div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="rating" value="2"> Poor</div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="rating" value="1"> Terrible</div>
+            </div>
+          </div>
+
+          <hr>
+
+          <!-- Things You Liked -->
+          <div class="row form-group">
+            <div class="col-sm-3">
+              <label class="control-label">Things You Liked:</label>
+            </div>
+            <div class="col-sm-9">
+              <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" value="motivation"> Passion/Motivation</div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" value="skills"> Functional Skills</div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" value="coding"> Coding</div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" value="domain"> Domain Knowledge</div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" value="soft"> Soft Skills</div>
+            </div>
+          </div>
+
+          <!-- Comments -->
+          <div class="row form-group">
+            <div class="col-sm-3">
+              <label for="comment" class="control-label">Comments:</label>
+            </div>
+            <div class="input-group col-sm-9">
+              <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-comment"></i></span></div>
+              <textarea class="form-control" id="comment" rows="5"></textarea>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="row form-group">
+            <div class="col-sm-12 submit-button">
+              <button type="button" id="submit" class="btn btn-default">Submit Form</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery + JavaScript -->
+  <script>
+  $(document).ready(function () {
+    $("#submit").click(function () {
+      // Get values from input fields
+      const name = $("#name").val().trim();
+      const email = $("#email").val().trim();
+
+      // Basic validation
+      if (name === "" || email === "") {
+        alert("⚠️ Please fill out all mandatory fields: Name and Email.");
+        return; // Stop execution
+      }
+
+      // If all required fields are filled
+      alert("✅ Thank You For Your Feedback!");
+      $("#survey-form")[0].reset();
+    });
+  });
+</script>
+</body>
+</html>
